@@ -1,0 +1,17 @@
+{
+  "_comment": "Configura dois serviços Vercel no mesmo domínio: frontend na raiz e backend no prefixo /_backend.",
+  "experimentalServices": {
+    "frontend": {
+      "_comment": "Constrói o app React/Vite localizado em frontend/ e publica a interface em /.",
+      "entrypoint": "frontend",
+      "routePrefix": "/",
+      "framework": "vite"
+    },
+    "backend": {
+      "_comment": "Constrói o backend Express localizado em backend/ e roteia a API em /_backend.",
+      "entrypoint": "backend",
+      "routePrefix": "/_backend",
+      "framework": "express"
+    }
+  }
+}
